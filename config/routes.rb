@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
     root to: 'pages#home'
     resources :users
+    resources :products
     # get 'users/index'
     # get 'users/new'
     # get 'users/edit'
