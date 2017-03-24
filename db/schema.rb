@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20170318083558) do
     t.integer  "rating"
     t.text     "comment"
     t.integer  "user_id"
-    t.integer  "prduct_id"
+    t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

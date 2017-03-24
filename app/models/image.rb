@@ -11,5 +11,5 @@
 #
 
 class Image < ActiveRecord::Base
-    belong_to :products
+    belongs_to :products
 end
