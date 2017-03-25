@@ -66,6 +66,25 @@ r9 = Review.create(:rating => '7', :comment => 'Lorem ipsum dolor sit amet, cons
 
 r10 = Review.create(:rating => '4.4', :comment => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
 
+
+Category.destroy_all
+c1 = Category.create(:name => 'Coffee');
+c2 = Category.create(:name => 'Tea');
+c3 = Category.create(:name => 'Coffee Machine');
+c4 = Category.create(:name => 'Moka Pot')
+
+#Products belongs_to Category
+c1.products << p1
+c2.products << p2
+c3.products << p3
+c4.products << p4
+c1.products << p5
+c2.products << p6
+c3.products << p7
+c4.products << p8
+c4.products << p9
+c1.products << p10
+
 # Products belongs_to user
 u1.products << p1
 u2.products << p2
