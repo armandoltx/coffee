@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'session/new'
-  get 'session/create'
-  get 'session/destroy'
-
   root to: 'pages#home'
+  get '/login' => 'session#new'
+  get '/login' => 'session#create'
+  get '/login' => 'session#destroy'
   resources :users
   resources :products
 end
