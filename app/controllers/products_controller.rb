@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+    before_action :user_signed_in?, :expcet => [:index, :show]
+    # user_signed_in? is defined in the application_controller.rb file to be able to use everywhere
+
     def index
         @products = Product.all
     end
