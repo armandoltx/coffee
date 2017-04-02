@@ -1,3 +1,30 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+.home1 {
+    height: 500px;
+    background-image: url("coffee.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    margin: 0;
+    text-align: center;
+    line-height: 500px;
+    vertical-align: middle;
+
+    .title-container {
+        z-index: 1000;
+        position: absolute;
+        top: 35%;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        // background-color: rgba(0, 0, 0, 0.4);
+        padding: 40px;
+
+        h1 {
+            font-size: $h1;
+            line-height: 2;
+        }
+    }
+}

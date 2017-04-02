@@ -1,0 +1,54 @@
+@import "https://fonts.googleapis.com/css?family=Noto+Sans|Ubuntu";
+/* line 1, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/variables.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*========= COLORS =======*/
+/*========= FONT FAMILY =======*/
+/*=========  SIZE =======*/
+/*========= mixin =======*/
+/* ========== PRODUCTS INDEX ================ */
+/* line 3, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index {
+  background-color: #B6B6B6;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 10, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products {
+  width: 80%;
+  background-color: navy;
+  display: block;
+  margin: 0 auto;
+}
+/* line 16, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* line 21, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products .coffe-wrap {
+  background-color: orange;
+  height: 250px;
+  width: 280px;
+  display: block;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-left: 45px;
+  margin-bottom: 45px;
+}
+/* line 32, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products .coffe-wrap figure {
+  background-color: red;
+  width: 200px;
+  height: 200px !important;
+  display: block;
+  margin: 0 auto;
+}

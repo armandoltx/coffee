@@ -1,1 +1,21 @@
-index product
+<section class="index">
+    <section class="index-products">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Products( maybe it is removed)</h1>
+            </div>
+            <% @products.each do |p| %>
+            <a href="<% product_path p %>">
+                <div class="col-xs-12 col-md-4 coffee-index coffe-wrap">
+                    <figure>
+                        <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
+                    </figure>
+
+                    <h3><%= p.name %></h3>
+                    <p><%= p.brand %></p>
+                </div>
+            </a>
+            <% end %>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/*========= COLORS =======*/
+$primary: #000000; // black
+$secondary: #1695A3; // blue
+$third: #FFD10F; // yellow
+$fourth: #FFFFFF;
+$black: #000000;
+$white: #FFFFFF;
+$red: #D32F2F;
+$dark-white: #f2f2f2;
+$grey: #B6B6B6;
+$pink: #e65380;
+$dark-brown: #582B1F;
+$yellow: #FFD10F;
+$purple: #B639BF;
+$dark-red: #A12750;
+$blue-grey: #273b47; //#a4b4ca;
+$grey-blue: #252F41;
+$light-grey: #5E7C88;
+$light-orange: #F25835;
+$dark-orange: #F24535;
+$light-blue: #1695A3;
+$ayellow: #EB7F00;
+$silver: #A69E9D;
+$golden: #96863e;
+$green: #257F78; // green
+/*========= FONT FAMILY =======*/
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans|Ubuntu';
+$helvetica: "Helvetica Neue",Arial,Verdana,sans-serif;
+$ubuntu: 'Ubuntu', sans-serif, $helvetica;
+$noto: 'Noto Sans', sans-serif, $helvetica;
+/*=========  SIZE =======*/
+$p20: 20px;
+$p16: 16px;
+$border: 2px;
+$h2: 35px;
+$h1: 50px;
+/*========= mixin =======*/
+@mixin link-menu {
+    text-decoration: none;
+    color: $fourth !important;
+    font-size: $p20;
+
+    &:hover {
+        color: $third !important;
+    }
+}
+@mixin button {
+    text-decoration: none;
+    background-color: $secondary;
+    border-radius: 1px;
+    // border: $border solid $white;
+    color: $white;
+    cursor: pointer;
+    padding: 15px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $third !important;
+    }
+}
+@mixin terms {
+    h2 {
+        font-family: $ubuntu;
+    }
+    padding: 40px;
+    margin: 0 auto;
+    background-color: $white;
+    box-shadow: 0 0 3px $grey;
+    font-family: $noto;
+}

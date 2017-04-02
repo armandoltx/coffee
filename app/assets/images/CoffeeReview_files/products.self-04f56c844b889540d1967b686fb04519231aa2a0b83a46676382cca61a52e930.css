@@ -1,0 +1,43 @@
+@import "https://fonts.googleapis.com/css?family=Noto+Sans|Ubuntu";
+/* line 1, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/variables.scss */
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+/*========= COLORS =======*/
+/*========= FONT FAMILY =======*/
+/*=========  SIZE =======*/
+/*========= mixin =======*/
+/* ========== PRODUCTS INDEX ================ */
+/* line 3, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products {
+  max-width: 1200px;
+  margin: 20px auto 50px;
+}
+/* line 8, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products h1 {
+  text-align: center;
+}
+/* line 12, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products .coffe-wrap {
+  height: 250px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+}
+/* line 23, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/products.scss */
+.index-products .coffe-wrap .product-img {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 200px !important;
+}

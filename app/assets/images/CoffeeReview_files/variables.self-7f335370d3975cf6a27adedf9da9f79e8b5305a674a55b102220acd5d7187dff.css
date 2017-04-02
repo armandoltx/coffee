@@ -1,0 +1,12 @@
+@import "https://fonts.googleapis.com/css?family=Noto+Sans|Ubuntu";
+/* line 1, /Users/Mandilu/Projects/coffee_review/app/assets/stylesheets/variables.scss */
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+/*========= COLORS =======*/
+/*========= FONT FAMILY =======*/
+/*=========  SIZE =======*/
+/*========= mixin =======*/
