@@ -1,2 +1,11 @@
 <h1>Users#new</h1>
 <p>Find me in app/views/users/new.html.erb</p>
+<div class="container-form user-form">
+  <%= simple_form_for @user do |f| %>
+  <%= f.input :name, label: 'Your name please', error: 'Name is mandatory' %>
+  <%= f.input :username %>
+  <%= f.input :password %>
+  <%= f.input :eamil, placeholder: 'user@domain.com' %>
+  <%= f.input :remeber_me, inline_label: 'Yes, remember me' %>
+  <%= f.button :submit %>
+</div>
