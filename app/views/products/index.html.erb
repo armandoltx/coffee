@@ -5,7 +5,7 @@
                 <h1>Products( maybe it is removed)</h1>
             </div>
             <% @products.each do |p| %>
-            <a href="<% product_path p %>">
+            <a href="<%= product_path(p.id) %>">
                 <div class="col-xs-12 col-md-4 coffee-index coffe-wrap">
                     <figure>
                         <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
