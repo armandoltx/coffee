@@ -1,0 +1,9 @@
+<div class="container-form user-form">
+  <%= simple_form_for @product do |f| %>
+  <%= f.input :name, label: 'Your name please', error: 'Name is mandatory' %>
+  <%= f.input :username %>
+  <%= f.input :password %>
+  <%= f.input :eamil, placeholder: 'user@domain.com' %>
+  <%= f.input :remeber_me, inline_label: 'Yes, remember me' %>
+  <%= f.button :submit %>
+</div>
