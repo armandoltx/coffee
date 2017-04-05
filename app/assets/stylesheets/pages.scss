@@ -28,3 +28,42 @@
         }
     }
 }
+
+.home2 {
+    background-color: $brown;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0 auto;
+
+    .home-search {
+        background-color: $ayellow;
+        width: 630px;
+        height: 50px;
+        margin: 0 auto;
+
+        .home-search-input {
+            border: 3px solid $ayellow;
+            background-color: $brown;
+            border-radius: 1px;
+            height: 45px; //8vh;
+            width: 500px; //45vw;
+        }
+
+        .home-search-button {
+            border: 1px solid $ayellow;
+            background-color: $ayellow;
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 600;
+            width: 120px;
+            height: 45px;
+
+            &:hover {
+                background-color: $brown;
+                color: $ayellow;
+            }
+        }
+    }
+}

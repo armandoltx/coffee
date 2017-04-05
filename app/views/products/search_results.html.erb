@@ -1,0 +1,27 @@
+<div class="container search-results-wrapper">
+  <div class="row">
+    <div class="col-md-7 show-events">
+      <h2>Search Results for '<%= @search_term %>'</h2>
+
+      <% if @found_products.empty? %>
+          <p>No result found</p>
+      <% end %>
+
+      <% @found_products.each do |product| %>
+            <a href="<%= product_path(product.id) %>">
+              <div class="col-xs-12 col-md-4 coffee-index coffe-wrap coffe-search">
+                <figure>
+                    <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
+                </figure>
+                <h2><%= product.name %></h2>
+                <div><%= truncate(product.description, :length => 80) %></div>
+              </div>
+
+            </a>
+      <% end  %>
+    </div><!-- end col-md-7 -->
+    <div class="col-md-5">
+      <%# render 'search_occasion_form' %>
+    </div><!-- end col-md-5 -->
+  </div><!-- end row -->
+</div><!-- end container -->

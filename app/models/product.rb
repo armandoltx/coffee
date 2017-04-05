@@ -18,4 +18,9 @@ class Product < ActiveRecord::Base
     belongs_to :category
     has_many :images
     has_many :reviews
+
+    def self.keyword_search(keywords)
+      keywords = "%" + keywords + "%"
+      Product.where("name ILIKE ? OR brand ILIKE ? OR model ILIKE ? OR description ILIKE ?", keywords, keywords, keywords, keywords)
+    end
 end

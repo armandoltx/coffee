@@ -37,6 +37,14 @@ class ProductsController < ApplicationController
       end
     end
 
+    def search_results
+      @products = Product.all.order('created_at DESC')
+      if params.has_key?("search_keywords")
+        @found_products = Product.keyword_search(params[:search_keywords])
+        @search_term = params[:search_keywords]
+      end
+    end
+
     private
 
     def product_params
