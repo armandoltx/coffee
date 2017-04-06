@@ -21,6 +21,21 @@ class Product < ActiveRecord::Base
 
     def self.keyword_search(keywords)
       keywords = "%" + keywords + "%"
-      Product.where("name ILIKE ? OR brand ILIKE ? OR model ILIKE ? OR description ILIKE ?", keywords, keywords, keywords, keywords)
+      # Product.where(search_in + keywords_in)
+       Product.where("name ILIKE ? OR brand ILIKE ? OR model ILIKE ? OR description ILIKE ?" keywords_in)
+    end
+
+    protected
+
+    def column_names
+      Product.column_names
+    end
+
+    def search_in
+      Product.column_names.map {|name| name + " ILIKE ? OR"}
+    end
+
+    def keywords_in
+      Product.column_names.map {|name| ", keywords"}
     end
 end
