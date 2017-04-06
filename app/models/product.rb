@@ -22,7 +22,7 @@ class Product < ActiveRecord::Base
     def self.keyword_search(keywords)
       keywords = "%" + keywords + "%"
       # Product.where(search_in + keywords_in)
-       Product.where("name ILIKE ? OR brand ILIKE ? OR model ILIKE ? OR description ILIKE ?" keywords_in)
+       Product.where("name ILIKE ? OR brand ILIKE ? OR model ILIKE ? OR description ILIKE ?",  keywords,  keywords,  keywords,  keywords)
     end
 
     protected
