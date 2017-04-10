@@ -3,14 +3,15 @@
     <h1>Test Compare Delight</h1>
     <h3>The place to enjoy your coffee</h3>
   </div>
+
 </section>
 <section class="home home2">
-      <div class="home-search">
-          <%= form_tag search_results_path, method: 'get' do %>
-          <%= text_field_tag :search_keywords, nil, placeholder: "enter keyword", :class => 'home-search-input', :style => 'padding-left: 5vh;' %>
-          <%= submit_tag "SEARCH", :class => 'home-search-button'%>
-          <% end %>
-      </div>
+  <div class="home-search">
+      <%= form_tag search_results_path, method: 'get' do %>
+      <%= text_field_tag :search_keywords, nil, placeholder: "enter keyword", :class => 'home-search-input', :style => 'padding-left: 5vh;' %>
+      <%= submit_tag "SEARCH", :class => 'home-search-button'%>
+      <% end %>
+  </div>
 </section>
 <section class="home home3 latest-home">
       <div class="row">
