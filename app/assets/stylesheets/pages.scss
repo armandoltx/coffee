@@ -68,45 +68,46 @@
     }
 }
 
-.home-content-1 {
-    text-align: center;
-    padding: 15px 0;
-    background-color: $white;
-    border-bottom: 5px solid rgba($primary, 0.8);
+.home3 {
+    .home-content-1 {
+        text-align: center;
+        padding: 15px 0;
+        background-color: $white;
+        border-bottom: 5px solid rgba($primary, 0.8);
 
-    h2 {
-        font-size: $h2;
+        h2 {
+            font-size: $h2;
+        }
     }
-}
 
-.home-content-2,
-.home-content-3 {
-    background-color: rgba($third, 0.9); //rgba( $ayellow, .7 );
-    color: $white;
-    border-bottom: 5px solid rgba($primary, 0.8);
-}
+    .home-content-2,
+    .home-content-3 {
+        background-color: rgba($third, 0.9); //rgba( $ayellow, .7 );
+        color: $white;
+        border-bottom: 5px solid rgba($primary, 0.8);
+    }
 
-.content-1,
-.content-4 {
-    margin: 75px 0;
-    line-height: 3;
-    text-align: center;
+    .content-1,
+    .content-4 {
+        margin: 75px 0;
+        line-height: 3;
+        text-align: center;
 
-    li {
-        list-style-type: none;
+        li {
+            list-style-type: none;
 
-        a {
-            @include button;
-            line-height: 3;
+            a {
+                @include button;
+                line-height: 3;
 
-            &:hover {
-                background-color: $primary !important;
+                &:hover {
+                    background-color: $primary !important;
+                }
             }
         }
     }
 
-    .content-2,
-    .content-3 {
+    .content-2 {
         margin: 35px 0;
     }
 }
