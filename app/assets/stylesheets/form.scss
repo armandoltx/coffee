@@ -20,6 +20,7 @@
 
         h1 {
             text-align: center;
+            margin-bottom: 40px;
         }
 
         .form-row {
@@ -36,6 +37,7 @@
             }
         }
 
+        .form-group,
         .input-group {
             //position: relative; to put the label on top of the input
             position: relative;
@@ -61,6 +63,8 @@
                 background-color: none;
                 border: none;
                 border-bottom: $border solid $primary;
+                border-radius: 0;
+                box-shadow: none;
 
                 &:active,
                 &:focus {
@@ -79,9 +83,10 @@
                 color: $primary;
             }
 
+            .control-label,
             .label {
                 position: absolute;
-                top: 16px;
+                top: 5px;
                 left: 0;
                 font-size: $p16;
                 line-height: 16px;

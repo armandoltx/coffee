@@ -18,7 +18,7 @@
         top: 35%;
         width: 100%;
         text-align: center;
-        color: $white;
+        color: #BBE2E2;
         // background-color: rgba(0, 0, 0, 0.4);
         padding: 40px;
 
@@ -30,40 +30,55 @@
 }
 
 .home2 {
-    background-color: $brown;
+    background-color: $secondary;
     text-align: center;
     padding: 20px 0;
     width: 100%;
     margin: 0 auto;
 
     .home-search {
-        background-color: $ayellow;
+        background-color: $blue-green;
         width: 630px;
         height: 50px;
         margin: 0 auto;
 
         .home-search-input {
-            border: 3px solid $ayellow;
-            background-color: $brown;
+            border: 3px solid $blue-green;
+            background-color: $blue-green;
             border-radius: 1px;
+            color: $white;
             height: 45px; //8vh;
             width: 500px; //45vw;
         }
 
         .home-search-button {
-            border: 1px solid $ayellow;
-            background-color: $ayellow;
+            border: 1px solid $blue-green;
+            background-color: $blue-green;
             text-align: center;
-            color: #FFFFFF;
+            color: $white;
             font-size: 20px;
             font-weight: 600;
             width: 120px;
             height: 45px;
 
             &:hover {
-                background-color: $brown;
-                color: $ayellow;
+                color: $secondary;
             }
         }
+    }
+}
+
+.latest-home {
+    // background-color: $secondary;
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+
+    .container {
+        width: 1010px;
+    }
+
+    .coffe-wrap {
+        //  background-color: $blue-grey;
     }
 }

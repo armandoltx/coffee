@@ -13,24 +13,21 @@
   </div>
 </section>
 <section class="home home3 latest-home">
-      <div class="row">
-          <div class="col-xs-12">
-              <h1>Latest Products</h1>
-          </div>
-          <% latest_products.each do |lp| %>
-          <a href="<%= product_path(lp.id) %>">
-              <div class="col-xs-12 col-md-4 coffee-index coffe-wrap">
-                  <figure>
-                      <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
-                  </figure>
-
-                  <h3><%= lp.name %></h3>
-                  <p><%= lp.brand %></p>
-              </div>
-          </a>
-          <% end %>
-      </div>
-  <% latest_products.each do |lp| %>
-    <div><%=lp.name %></div>
-  <% end %>
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Latest Products</h1>
+        </div>
+        <% latest_products.each do |lp| %>
+        <a href="<%= product_path(lp.id) %>">
+            <div class="col-xs-12 col-md-4 coffee-index coffe-wrap">
+                <figure>
+                    <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
+                </figure>
+                <h3><%= lp.name %></h3>
+            </div>
+        </a>
+        <% end %>
+    </div>
+  </div>
 </section>

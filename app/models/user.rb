@@ -14,7 +14,7 @@
 
 class User < ActiveRecord::Base
 
-    validates :name, :password, :email, presence: true
+    validates :name, :password, :password_confirmation, :email, presence: true
 
     has_many :products
     has_many :reviews, dependent: :destroy
