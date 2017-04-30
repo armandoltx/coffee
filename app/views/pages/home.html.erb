@@ -4,6 +4,7 @@
     <h3>The place to enjoy your coffee</h3>
   </div>
 </section>
+<!-- ####################################################################### -->
 <section class="home home2">
   <div class="home-search">
       <%= form_tag search_results_path, method: 'get' do %>
@@ -12,22 +13,49 @@
       <% end %>
   </div>
 </section>
-<section class="home home3 latest-home">
-  <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <h1>Latest Products</h1>
-        </div>
-        <% latest_products.each do |lp| %>
-        <a href="<%= product_path(lp.id) %>">
-            <div class="col-xs-12 col-md-4 coffee-index coffe-wrap">
-                <figure>
-                    <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
-                </figure>
-                <h3><%= lp.name %></h3>
-            </div>
-        </a>
-        <% end %>
+<!-- ####################################################################### -->
+<section class="home home3 ">
+  <div class="col-xs-12 home-content-1">
+    <h2>Find the coffee you need for any occasion</h2>
+  </div><!-- end div-content -->
+  <div class="home-content-2">
+    <div class="container">
+      <div class="row">
+            <div class="col-xs-12 col-md-6 home content-1">
+              <div>
+                <h3>What kind of coffee do you feel today?</h3>
+                <p>Checkout the list of the coffees and their reviews</p>
+                <p>Meet other coffee lovers.</p>
+              </div>
+              <div>
+                <li><%= link_to 'Sign up', new_user_path %></li>
+              </div>
+
+            </div><!-- end home content-1 -->
+            <div class="col-xs-12 col-md-6 home content-2">
+              <%= image_tag( 'coffeeCUP.jpg', :class => 'coffee-cup img-responsive') %>
+            </div><!-- end home content-2 -->
+        </div><!-- end row -->
+      </div><!-- end container -->
+    </div><!-- end home-content-1 -->
+</section>
+<!-- ####################################################################### -->
+<section class="home home4 latest-home">
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+              <h2>Latest Products</h2>
+          </div>
+          <% latest_products.each do |lp| %>
+          <a href="<%= product_path(lp.id) %>">
+              <div class="col-xs-12 col-md-4 coffee-index coffe-wrap">
+                  <figure>
+                      <%= image_tag('cafe.jpg', :class => 'product-img img-responsive') %>
+                  </figure>
+                  <h3><%= lp.name %></h3>
+              </div>
+          </a>
+          <% end %>
+      </div>
     </div>
-  </div>
 </section>

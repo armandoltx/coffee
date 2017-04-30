@@ -59,3 +59,39 @@ header.navbar {
         }
     }
 }
+/*========= FOOTER =======*/
+footer {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba($secondary, 0.9); //rgba( $ayellow, .7 );
+    border-top: 10px solid $blue-green;
+
+    .social {
+        text-align: center;
+        padding: 20px 0;
+
+        .fa {
+            margin-left: 10px;
+            color: $blue-green;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .foo {
+        h6 {
+            color: $white;
+        }
+
+        li {
+            cursor: pointer;
+            list-style-type: none;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
