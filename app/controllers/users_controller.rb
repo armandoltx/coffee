@@ -28,13 +28,17 @@ class UsersController < ApplicationController
 
     def update
         @user = @current_user
-        if @user.update
+        if @user.update user_params
+          if(params[:file]).present?
+            req = Cloudinary::Uploader.upload(params[:file])
+            @user.update :image => req["url"]
+          end
             redirect_to edit_user_path(@user)
             flash[:message] = 'User Updated.'
         else
             render:edit
             flash[:message] = 'There was a problem with your changes.'
-      end
+        end
     end
 
     def destroy

@@ -1,22 +1,45 @@
 class ProductsController < ApplicationController
-    before_action :user_signed_in?, :expcet => [:index, :show]
+    # before_action :user_signed_in?, :expcet => [:index, :show]
     # user_signed_in? is defined in the application_controller.rb file to be able to use everywhere
 
     def index
-        @products = Product.all
+        @products = Product.all.order('created_at DESC')
     end
 
     def show
         @product = Product.find(params[:id])
     end
 
+    def new
+      @product = Product.new
+    end
+
+    def create
+      @product = Product.new(product_params)
+      @product.user_id = @current_user.id
+
+      if params[:file].present?
+        req = Cloudinary::Uploader.upload(params[:file])     # This is the magic stuff that will let us upload an image to Cloudinary when creating a new occasion.
+        @product.image = req["url"]
+      end
+      if @product.save
+        redirect_to @product
+      else
+        render 'new'
+      end
+    end
+
     def edit
         @product = Product.find(params[:id])
-        redirect_to root_path unless @prduct.id == @current_user.id
+        redirect_to root_path unless @product.id == @current_user.id || @current_user.admin?
     end
 
     def update
         @product = Product.find(params[:id])
+        if (params[:file]).present?
+        req = Cloudinary::Uploader.upload(params[:file])
+        @product.image = req["url"]
+        end
         if @product.update(product_params)
             redirect_to @product
             flash[:message] = 'Product Updated.'

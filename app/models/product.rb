@@ -30,12 +30,4 @@ class Product < ActiveRecord::Base
     def column_names
       Product.column_names
     end
-
-    def search_in
-      Product.column_names.map {|name| name + " ILIKE ? OR"}
-    end
-
-    def keywords_in
-      Product.column_names.map {|name| ", keywords"}
-    end
 end

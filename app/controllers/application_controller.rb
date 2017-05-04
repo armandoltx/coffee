@@ -9,13 +9,12 @@ class ApplicationController < ActionController::Base
 
   def user_signed_in?
     flash[:notice] = 'Please login' unless @current_user
-    # redirect_to_new_user_session_path unless @current_user
+    redirect_to new_user_session_path unless @current_user
   end
 
   def fetch_user
     if session[:user_id].present?
       @current_user = User.find_by :id => session[:user_id]
-
       session[:user_id] = nil unless @current_user
     end
   end

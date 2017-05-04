@@ -1,15 +1,15 @@
 User.destroy_all
 
-u1 = User.create(name: 'Armando', email: 'armando2a2r@gmail.com', password_digest: '1234', admin: true)
-u2 = User.create(name: 'Javi', email: 'javi@email.com', password_digest: '1234')
-u3 = User.create(name: 'Adrian', email: 'adri@email.com', password_digest: '1234')
-u4 = User.create(name: 'Lucia', email: 'lucia@email.com', password_digest: '1234')
-u5 = User.create(name: 'Diego', email: 'diego@email.com', password_digest: '1234')
-u6 = User.create(name: 'Cristina', email: 'cristina@email.com', password_digest: '1234')
-u7 = User.create(name: 'Danny', email: 'danny@email.com', password_digest: '1234')
-u8 = User.create(name: 'Peter', email: 'peter@email.com', password_digest: '1234')
+u1 = User.create(name: 'Armando', email: 'armando2a2r@gmail.com', password_digest: '12345', admin: true)
+u2 = User.create(name: 'Javi', email: 'javi@email.com', password_digest: '12345')
+u3 = User.create(name: 'Adrian', email: 'adri@email.com', password_digest: '12345')
+u4 = User.create(name: 'Lucia', email: 'lucia@email.com', password_digest: '12345')
+u5 = User.create(name: 'Diego', email: 'diego@email.com', password_digest: '12345')
+u6 = User.create(name: 'Cristina', email: 'cristina@email.com', password_digest: '12345')
+u7 = User.create(name: 'Danny', email: 'danny@email.com', password_digest: '12345')
+u8 = User.create(name: 'Peter', email: 'peter@email.com', password_digest: '12345')
 u9 = User.create(name: 'Paul', email: 'paul@email.com', password_digest: '1234')
-u10 = User.create(name: 'Maria', email: 'maria@email.com', password_digest: '1234')
+u10 = User.create(name: 'Maria', email: 'maria@email.com', password_digest: '12345')
 
 Product.destroy_all
 p1 = Product.create(name: 'moka', brand: 'Nestle', model: 'aka33', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')

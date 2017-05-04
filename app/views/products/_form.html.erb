@@ -1,9 +1,26 @@
-<div class="container-form user-form">
-  <%= simple_form_for @product do |f| %>
-  <%= f.input :name, label: 'Your name please', error: 'Name is mandatory' %>
-  <%= f.input :username %>
-  <%= f.input :password %>
-  <%= f.input :eamil, placeholder: 'user@domain.com' %>
-  <%= f.input :remeber_me, inline_label: 'Yes, remember me' %>
-  <%= f.button :submit %>
+<div class="col-xs-12 col-md-4  col-md-offset-1 container-form">
+  <div class="wrapper form">
+    <%= simple_form_for @product, :html => {:multipart => true} do |f| %><%#  we need :html => {:multipart => true} do |f| beacuse we are adding images with cloudinary %>
+    <%= f.input :name, label: 'Product Name', error: 'Name is Mandatory' %>
+    <%= f.input :brand, label: 'Brand Name', error: 'Brand is Mandatory' %>
+    <%= f.input :model, label: 'Model Name', error: 'Model is Mandatory' %>
+    <%= f.input :description, as: :text %>
+    <div class="">
+        <%# To display cloudinary image %>
+        <%= cl_image_upload_tag(@product.cloudinary_image) %>
+    </div>
+    <%= f.button :submit %>
+    <% end %>
+  </div>
 </div>
+# Table name: products
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  brand       :string
+#  model       :string
+#  description :text
+#  user_id     :integer
+#  category_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime

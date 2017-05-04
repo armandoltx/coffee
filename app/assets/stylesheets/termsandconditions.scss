@@ -1,0 +1,13 @@
+@import "variables";
+
+.container-terms {
+    background-color: $white;
+    box-shadow: 0 0 3px $grey;
+    padding: 40px;
+    font-family: $ubuntu;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
